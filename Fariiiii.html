@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fareeha's likes and dislikes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: rgb(107, 18, 197);
+    }
+
+    /* Slide panel style */
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(30, 18, 197);
+      color: rgb(255, 255, 255);
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidebar h2 {
+      margin-left: 20px;
+    }
+
+    .sidebar-content {
+      padding: 20px;
+    }
+
+    .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 36px;
+      cursor: pointer;
+    }
+
+    /* Toggle button */
+    .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #057c99;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      margin: 20px;
+    }
+
+    /* Your original button style */
+    button.main {
+      background-color: #07728f;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 20px;
+      margin: 4px 2px;
+      cursor: pointer;
+      width: 260px;
+      font-family: Bold;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Toggle Button -->
+<button class="openbtn" onclick="openNav()">☰ Fareeeha"s Likes and Dislikes</button>
+
+<!-- Your original content -->
+<p>Fareeha Tahreen: An Artist &#183; An Editor</p>
+<button class="main">Happy Birthdayyyy and Congratulation Fareeha Tahreen, you are now 17⋆｡</button><br><br>
+<p>Heeeeyyy,Farriiii ,I hope your all wishes will come true by the grace of our Almmighty.It was great meeting you.You are one of the most amazing person i met online.Ig irl too.Always be happy and stay safe..and thanks for being friend with me and supporting me . I wish you luck for your bright future!!!!
+   </p></I>
+
+<!-- Slide Panel -->
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <h2>Fareeha's Info Panel</h2>
+  <div class="sidebar-content">
+    <p>Thinks She Likes</p>
+    <ul>
+      <li>Hobby: Drawing (traditional and digital),Editing</li>
+      <li>Favourite Colour :Black</li>
+      <li>Favourite Food :Biryani,Burger</li>
+      <li>Favourite Anime : Haikyuu</li>
+      <li>Favourite anime character:Muichirou,Bakugo</li>
+      <li>Height:5'6"</li>
+      <li>Favourite Car Company: Marcedes</li>
+      <li>Fav. People Count: 5 in irl</li>
+      <li>Favourite Songs:"M","Jhol","Maand"</li>
+      <li>Favourite Singer: Atif Aslam</li>
+      <li>Motive that keeps her going:Fear of not being Independent</li>
+      <li>Idol: Tommy innit</li>
+      <li>Favourite Youtuber:Tommyinnit</li>
+      <li>Fav. Anime Openings:"The apothecary diaries s1,"tobe fly","Watokoi"</li>
+      <li>Dream Countries:Qatar,UK,switzerland,Japan,Turkey</li>
+      <li>Also Wanna Visit:: UAE,Saudi Arabia</li>
+    </ul>
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "300px";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+  }
+</script>
+
+</body>
+</html>
