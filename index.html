@@ -3,11 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>Fareeha's likes and dislikes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    /* Animated background */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: rgb(107, 18, 197);
+      background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
     }
 
     /* Slide panel style */
@@ -18,8 +31,8 @@
       z-index: 1;
       top: 0;
       left: 0;
-      background-color: rgb(30, 18, 197);
-      color: rgb(255, 255, 255);
+      background-color: rgba(30, 18, 197, 0.95);
+      color: #fff;
       overflow-x: hidden;
       transition: 0.5s;
       padding-top: 60px;
@@ -49,10 +62,11 @@
       color: white;
       padding: 10px 20px;
       border: none;
-      margin: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
     }
 
-    /* Your original button style */
+    /* Main button style */
     button.main {
       background-color: #07728f;
       border: none;
@@ -61,23 +75,60 @@
       text-align: center;
       display: inline-block;
       font-size: 20px;
-      margin: 4px 2px;
+      margin: 10px 0;
       cursor: pointer;
-      width: 260px;
-      font-family: Bold;
+      width: 100%;
+      max-width: 320px;
+      border-radius: 10px;
+    }
+
+    p {
+      max-width: 800px;
+      margin: 10px auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .main, .openbtn {
+        font-size: 18px;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      p {
+        font-size: 0.95rem;
+      }
+      li {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
 <body>
 
 <!-- Toggle Button -->
-<button class="openbtn" onclick="openNav()">☰ Fareeeha"s Likes and Dislikes</button>
+<button class="openbtn" onclick="openNav()">☰ Fareeeha's Likes and Dislikes</button>
 
-<!-- Your original content -->
+<!-- Original content -->
 <p>Fareeha Tahreen: An Artist &#183; An Editor</p>
 <button class="main">Happy Birthdayyyy and Congratulation Fareeha Tahreen, you are now 17⋆｡</button><br><br>
-<p>Heeeeyyy,Farriiii ,I hope your all wishes will come true by the grace of our Almmighty.It was great meeting you.You are one of the most amazing person i met online.Ig irl too.Always be happy and stay safe..and thanks for being friend with me and supporting me . I wish you luck for your bright future!!!!
-   </p></I>
+<p>Heeeeyyy, Farriiii 💖, I hope all your wishes come true by the grace of our Almighty. It was great meeting you. You are one of the most amazing people I met online — maybe even irl too. Always be happy and stay safe. Thanks for being friends with me and supporting me. I wish you the brightest future ever!!!</p>
 
 <!-- Slide Panel -->
 <div id="mySidebar" class="sidebar">
@@ -86,22 +137,22 @@
   <div class="sidebar-content">
     <p>Thinks She Likes</p>
     <ul>
-      <li>Hobby: Drawing (traditional and digital),Editing</li>
-      <li>Favourite Colour :Black</li>
-      <li>Favourite Food :Biryani,Burger</li>
-      <li>Favourite Anime : Haikyuu</li>
-      <li>Favourite anime character:Muichirou,Bakugo</li>
-      <li>Height:5'6"</li>
+      <li>Hobby: Drawing (traditional and digital), Editing</li>
+      <li>Favourite Colour: Black</li>
+      <li>Favourite Food: Biryani, Burger</li>
+      <li>Favourite Anime: Haikyuu</li>
+      <li>Favourite Anime Characters: Muichirou, Bakugo</li>
+      <li>Height: 5'6"</li>
       <li>Favourite Car Company: Marcedes</li>
       <li>Fav. People Count: 5 in irl</li>
-      <li>Favourite Songs:"M","Jhol","Maand"</li>
+      <li>Favourite Songs: "M", "Jhol", "Maand"</li>
       <li>Favourite Singer: Atif Aslam</li>
-      <li>Motive that keeps her going:Fear of not being Independent</li>
-      <li>Idol: Tommy innit</li>
-      <li>Favourite Youtuber:Tommyinnit</li>
-      <li>Fav. Anime Openings:"The apothecary diaries s1,"tobe fly","Watokoi"</li>
-      <li>Dream Countries:Qatar,UK,switzerland,Japan,Turkey</li>
-      <li>Also Wanna Visit:: UAE,Saudi Arabia</li>
+      <li>Motive That Keeps Her Going: Fear of not being Independent</li>
+      <li>Idol: TommyInnit</li>
+      <li>Favourite YouTuber: TommyInnit</li>
+      <li>Fav. Anime Openings: The Apothecary Diaries S1, "Tobe Fly", "Watokoi"</li>
+      <li>Dream Countries: Qatar, UK, Switzerland, Japan, Turkey</li>
+      <li>Also Wanna Visit: UAE, Saudi Arabia</li>
     </ul>
   </div>
 </div>
