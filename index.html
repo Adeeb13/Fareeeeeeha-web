@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Fareeha's likes and dislikes</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     /* Animated background */
     body {
@@ -15,12 +15,21 @@
       color: white;
       padding: 20px;
       box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     /* Slide panel style */
@@ -64,6 +73,7 @@
       border: none;
       margin: 20px 0;
       border-radius: 8px;
+      align-self: flex-start;
     }
 
     /* Main button style */
@@ -87,6 +97,7 @@
       margin: 10px auto;
       font-size: 1.1rem;
       line-height: 1.6;
+      flex-grow: 1;
     }
 
     ul {
@@ -97,23 +108,57 @@
       margin: 8px 0;
     }
 
+    /* Responsive image gallery container */
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: auto;
+      padding-top: 30px;
+      padding-bottom: 20px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .image-gallery img {
+      border-radius: 12px;
+      width: 45vw;
+      max-width: 180px;
+      height: auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .image-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Responsive adjustments */
     @media (max-width: 768px) {
-      h1 {
-        font-size: 1.8rem;
+      .image-gallery img {
+        width: 40vw;
+        max-width: 140px;
       }
       p {
         font-size: 1rem;
       }
-      .main, .openbtn {
+      .main,
+      .openbtn {
         font-size: 18px;
         width: 100%;
       }
     }
 
     @media (max-width: 480px) {
-      p {
-        font-size: 0.95rem;
+      .image-gallery img {
+        width: 70vw;
+        max-width: 220px;
       }
+      p,
       li {
         font-size: 0.95rem;
       }
@@ -121,52 +166,84 @@
   </style>
 </head>
 <body>
+  <!-- Toggle Button -->
+  <button class="openbtn" onclick="openNav()">☰ Fareeeha's Likes and Dislikes</button>
 
-<!-- Toggle Button -->
-<button class="openbtn" onclick="openNav()">☰ Fareeeha's Likes and Dislikes</button>
+  <!-- Original content -->
+  <p>
+    Fareeha Tahreen: An Artist &#183; An Editor
+  </p>
+  <button class="main">
+    Happy Birthdayyyy and Congratulation Fareeha Tahreen, you are now 17⋆｡
+  </button>
+  <br /><br />
+  <p>
+    Heeeeyyy, Farriiii 💖, I hope all your wishes come true by the grace of our
+    Almighty. It was great meeting you. You are one of the most amazing people I
+    met online — maybe even irl too. Always be happy and stay safe. Thanks for
+    being friends with me and supporting me. I wish you the brightest future
+    ever!!!
+  </p>
 
-<!-- Original content -->
-<p>Fareeha Tahreen: An Artist &#183; An Editor</p>
-<button class="main">Happy Birthdayyyy and Congratulation Fareeha Tahreen, you are now 17⋆｡</button><br><br>
-<p>Heeeeyyy, Farriiii 💖, I hope all your wishes come true by the grace of our Almighty. It was great meeting you. You are one of the most amazing people I met online — maybe even irl too. Always be happy and stay safe. Thanks for being friends with me and supporting me. I wish you the brightest future ever!!!</p>
-
-<!-- Slide Panel -->
-<div id="mySidebar" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <h2>Fareeha's Info Panel</h2>
-  <div class="sidebar-content">
-    <p>Thinks She Likes</p>
-    <ul>
-      <li>Hobby: Drawing (traditional and digital), Editing</li>
-      <li>Favourite Colour: Black</li>
-      <li>Favourite Food: Biryani, Burger</li>
-      <li>Favourite Anime: Haikyuu</li>
-      <li>Favourite Anime Characters: Muichirou, Bakugo</li>
-      <li>Height: 5'6"</li>
-      <li>Favourite Car Company: Marcedes</li>
-      <li>Fav. People Count: 5 in irl</li>
-      <li>Favourite Songs: "M", "Jhol", "Maand"</li>
-      <li>Favourite Singer: Atif Aslam</li>
-      <li>Motive That Keeps Her Going: Fear of not being Independent</li>
-      <li>Idol: TommyInnit</li>
-      <li>Favourite YouTuber: TommyInnit</li>
-      <li>Fav. Anime Openings: The Apothecary Diaries S1, "Tobe Fly", "Watokoi"</li>
-      <li>Dream Countries: Qatar, UK, Switzerland, Japan, Turkey</li>
-      <li>Also Wanna Visit: UAE, Saudi Arabia</li>
-    </ul>
+  <!-- Slide Panel -->
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <h2>Fareeha's Info Panel</h2>
+    <div class="sidebar-content">
+      <p>Thinks She Likes</p>
+      <ul>
+        <li>Hobby: Drawing (traditional and digital), Editing</li>
+        <li>Favourite Colour: Black</li>
+        <li>Favourite Food: Biryani, Burger</li>
+        <li>Favourite Anime: Haikyuu</li>
+        <li>Favourite Anime Characters: Muichirou, Bakugo</li>
+        <li>Height: 5'6"</li>
+        <li>Favourite Car Company: Marcedes</li>
+        <li>Fav. People Count: 5 in irl</li>
+        <li>Favourite Songs: "M", "Jhol", "Maand"</li>
+        <li>Favourite Singer: Atif Aslam</li>
+        <li>Motive That Keeps Her Going: Fear of not being Independent</li>
+        <li>Idol: TommyInnit</li>
+        <li>Favourite YouTuber: TommyInnit</li>
+        <li>Fav. Anime Openings: The Apothecary Diaries S1, "Tobe Fly", "Watokoi"</li>
+        <li>Dream Countries: Qatar, UK, Switzerland, Japan, Turkey</li>
+        <li>Also Wanna Visit: UAE, Saudi Arabia</li>
+      </ul>
+    </div>
   </div>
-</div>
 
-<!-- JavaScript -->
-<script>
-  function openNav() {
-    document.getElementById("mySidebar").style.width = "300px";
-  }
+  <!-- Image Gallery at bottom -->
+  <div class="image-gallery">
+    <img
+      src="https://forthenovellovers.files.wordpress.com/2020/05/season-1.jpg?w=600"
+      alt="Haikyuu Season 1"
+      loading="lazy"
+    />
+    <img
+      src="https://nationaltoday.com/wp-content/uploads/2021/04/tommyinnit-1.jpg"
+      alt="TommyInnit"
+      loading="lazy"
+    />
+    <img
+      src="https://cdn.rafled.com/anime-icons/images/d9ddf7a0cd6f28389fa10ad8c1205efb034381b50e16570f00349a57fdf2b80d.jpg"
+      alt="Muichirou"
+      loading="lazy"
+    />
+    <img
+      src="https://pbs.twimg.com/media/FmABTjuWYAAgOeJ.jpg"
+      alt="Bakugo"
+      loading="lazy"
+    />
+  </div>
 
-  function closeNav() {
-    document.getElementById("mySidebar").style.width = "0";
-  }
-</script>
-
+  <!-- JavaScript -->
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "300px";
+    }
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+    }
+  </script>
 </body>
 </html>
