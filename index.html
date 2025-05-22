@@ -21,15 +21,9 @@
     }
 
     @keyframes gradientBG {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     /* Slide panel style */
@@ -163,9 +157,56 @@
         font-size: 0.95rem;
       }
     }
+
+    /* 🎉 Surprise Overlay Styles */
+    .surprise {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      font-family: cursive;
+      font-size: 2rem;
+      z-index: 10;
+    }
+
+    .surprise h1 {
+      margin: 0;
+      font-size: 3rem;
+      text-align: center;
+    }
+
+    .surprise p {
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+
+    .emoji {
+      position: absolute;
+      font-size: 2rem;
+      animation: floatUp 4s linear forwards;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-800px); opacity: 0; }
+    }
   </style>
 </head>
 <body>
+
+  <!-- 🎉 Surprise Overlay (Inserted at top of body) -->
+  <div class="surprise" id="surprise">
+    <h1>🎉 Happy Birthdayyy Fareeha! 🎂</h1>
+    <p>Congratulations on being 17 🥳</p>
+  </div>
+
   <!-- Toggle Button -->
   <button class="openbtn" onclick="openNav()">☰ Fareeha's Likes and Dislikes</button>
 
@@ -178,7 +219,7 @@
   </button>
   <br /><br />
   <p>
-    Heeeeyyy, Farriiii 💖, I hope all your wishes come true by the grace of our
+    Heeeeyyy, Farriiii 💜, I hope all your wishes come true by the grace of our
     Almighty. It was great meeting you. You are one of the most amazing people I
     met online — maybe even irl too. Always be happy and stay safe. Thanks for
     being friends with me and supporting me. I wish you the brightest future
@@ -214,26 +255,10 @@
 
   <!-- Image Gallery at bottom -->
   <div class="image-gallery">
-    <img
-      src="https://i.imgur.com/eLnMW9B.jpg"
-      alt="Haikyuu Season 1"
-      loading="lazy"
-    />
-    <img
-      src="https://i.imgur.com/1f4uIUR.jpg"
-      alt="TommyInnit"
-      loading="lazy"
-    />
-    <img
-      src="https://i.imgur.com/FNGBryD.jpg"
-      alt="Muichirou"
-      loading="lazy"
-    />
-    <img
-      src="https://i.imgur.com/USOGIjq.jpg"
-      alt="Bakugo"
-      loading="lazy"
-    />
+    <img src="https://i.imgur.com/eLnMW9B.jpg" alt="Haikyuu Season 1" loading="lazy" />
+    <img src="https://i.imgur.com/1f4uIUR.jpg" alt="TommyInnit" loading="lazy" />
+    <img src="https://i.imgur.com/FNGBryD.jpg" alt="Muichirou" loading="lazy" />
+    <img src="https://i.imgur.com/USOGIjq.jpg" alt="Bakugo" loading="lazy" />
   </div>
 
   <!-- JavaScript -->
@@ -244,6 +269,25 @@
     function closeNav() {
       document.getElementById("mySidebar").style.width = "0";
     }
+
+    // 🎉 Surprise animation script
+    window.onload = () => {
+      const surprise = document.getElementById("surprise");
+      const emojis = ["🎉", "🎂", "🎈", "🥳", "✨", "🎊"];
+
+      for (let i = 0; i < 30; i++) {
+        const emoji = document.createElement("div");
+        emoji.className = "emoji";
+        emoji.style.left = Math.random() * 100 + "vw";
+        emoji.style.top = Math.random() * 80 + 20 + "vh";
+        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        surprise.appendChild(emoji);
+      }
+
+      setTimeout(() => {
+        surprise.style.display = "none";
+      }, 5000);
+    };
   </script>
 </body>
 </html>
