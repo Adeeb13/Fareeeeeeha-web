@@ -26,6 +26,52 @@
       100% { background-position: 0% 50%; }
     }
 
+    /* Surprise overlay */
+    .surprise {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 2rem;
+      text-align: center;
+      animation: fadeIn 1s ease;
+      transition: opacity 1s ease;
+    }
+
+    .surprise.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .emoji {
+      position: absolute;
+      animation: floatUp 4s linear infinite;
+      font-size: 2rem;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
     /* Slide panel style */
     .sidebar {
       height: 100%;
@@ -57,7 +103,6 @@
       cursor: pointer;
     }
 
-    /* Toggle button */
     .openbtn {
       font-size: 20px;
       cursor: pointer;
@@ -70,7 +115,6 @@
       align-self: flex-start;
     }
 
-    /* Main button style */
     button.main {
       background-color: #07728f;
       border: none;
@@ -79,7 +123,7 @@
       text-align: center;
       display: inline-block;
       font-size: 20px;
-      margin: 10px 0;
+      margin: 10px 0 20px;
       cursor: pointer;
       width: 100%;
       max-width: 320px;
@@ -102,7 +146,6 @@
       margin: 8px 0;
     }
 
-    /* Responsive image gallery container */
     .image-gallery {
       display: flex;
       flex-wrap: wrap;
@@ -110,7 +153,7 @@
       gap: 15px;
       margin-top: auto;
       padding-top: 30px;
-      padding-bottom: 20px;
+      padding-bottom: 40px;
       max-width: 900px;
       margin-left: auto;
       margin-right: auto;
@@ -131,7 +174,6 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     }
 
-    /* Responsive adjustments */
     @media (max-width: 768px) {
       .image-gallery img {
         width: 40vw;
@@ -157,69 +199,21 @@
         font-size: 0.95rem;
       }
     }
-
-    /* 🎉 Surprise Overlay Styles */
-    .surprise {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.9);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      color: white;
-      font-family: cursive;
-      font-size: 2rem;
-      z-index: 10;
-    }
-
-    .surprise h1 {
-      margin: 0;
-      font-size: 3rem;
-      text-align: center;
-    }
-
-    .surprise p {
-      font-size: 1.5rem;
-      margin-top: 10px;
-    }
-
-    .emoji {
-      position: absolute;
-      font-size: 2rem;
-      animation: floatUp 4s linear forwards;
-    }
-
-    @keyframes floatUp {
-      0% { transform: translateY(0); opacity: 1; }
-      100% { transform: translateY(-800px); opacity: 0; }
-    }
   </style>
 </head>
 <body>
-
-  <!-- 🎉 Surprise Overlay (Inserted at top of body) -->
+  <!-- Surprise Message -->
   <div class="surprise" id="surprise">
-    <h1>🎉 Happy Birthdayyy Fareeha! 🎂</h1>
-    <p>Congratulations on being 17 🥳</p>
+    🎉 Happyy Birthdayyy Fareeha 🎂<br />And congratulations on turning 17!
   </div>
 
   <!-- Toggle Button -->
   <button class="openbtn" onclick="openNav()">☰ Fareeha's Likes and Dislikes</button>
 
-  <!-- Original content -->
+  <p>Fareeha Tahreen: An Artist &#183; An Editor</p>
+  <button class="main">Happy Birthdayyyy and Congratulation Fareeha Tahreen, you are now 17⋆｡</button>
   <p>
-    Fareeha Tahreen: An Artist &#183; An Editor
-  </p>
-  <button class="main">
-    Happy Birthdayyyy and Congratulation Fareeha Tahreen, you are now 17⋆｡
-  </button>
-  <br /><br />
-  <p>
-    Heeeeyyy, Farriiii 💜, I hope all your wishes come true by the grace of our
+    Heeeeyyy, Farriiii 💖, I hope all your wishes come true by the grace of our
     Almighty. It was great meeting you. You are one of the most amazing people I
     met online — maybe even irl too. Always be happy and stay safe. Thanks for
     being friends with me and supporting me. I wish you the brightest future
@@ -253,15 +247,14 @@
     </div>
   </div>
 
-  <!-- Image Gallery at bottom -->
+  <!-- Image Gallery -->
   <div class="image-gallery">
-    <img src="https://i.imgur.com/eLnMW9B.jpg" alt="Haikyuu Season 1" loading="lazy" />
-    <img src="https://i.imgur.com/1f4uIUR.jpg" alt="TommyInnit" loading="lazy" />
-    <img src="https://i.imgur.com/FNGBryD.jpg" alt="Muichirou" loading="lazy" />
-    <img src="https://i.imgur.com/USOGIjq.jpg" alt="Bakugo" loading="lazy" />
+    <img src="https://i.imgur.com/eLnMW9B.jpg" alt="Haikyuu Season 1" />
+    <img src="https://i.imgur.com/1f4uIUR.jpg" alt="TommyInnit" />
+    <img src="https://i.imgur.com/FNGBryD.jpg" alt="Muichirou" />
+    <img src="https://i.imgur.com/USOGIjq.jpg" alt="Bakugo" />
   </div>
 
-  <!-- JavaScript -->
   <script>
     function openNav() {
       document.getElementById("mySidebar").style.width = "300px";
@@ -270,24 +263,24 @@
       document.getElementById("mySidebar").style.width = "0";
     }
 
-    // 🎉 Surprise animation script
-    window.onload = () => {
-      const surprise = document.getElementById("surprise");
-      const emojis = ["🎉", "🎂", "🎈", "🥳", "✨", "🎊"];
+    // Floating emoji logic
+    const surprise = document.getElementById("surprise");
 
-      for (let i = 0; i < 30; i++) {
-        const emoji = document.createElement("div");
-        emoji.className = "emoji";
-        emoji.style.left = Math.random() * 100 + "vw";
-        emoji.style.top = Math.random() * 80 + 20 + "vh";
-        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-        surprise.appendChild(emoji);
-      }
+    // Add floating emojis
+    for (let i = 0; i < 20; i++) {
+      const emoji = document.createElement("div");
+      emoji.classList.add("emoji");
+      emoji.innerText = ["🎉", "✨", "🎂", "💖", "🎈"][Math.floor(Math.random() * 5)];
+      emoji.style.left = Math.random() * 100 + "vw";
+      emoji.style.top = Math.random() * 100 + "vh";
+      emoji.style.animationDuration = 3 + Math.random() * 2 + "s";
+      surprise.appendChild(emoji);
+    }
 
-      setTimeout(() => {
-        surprise.style.display = "none";
-      }, 5000);
-    };
+    // Hide surprise after 5 seconds
+    setTimeout(() => {
+      surprise.classList.add("hide");
+    }, 5000);
   </script>
 </body>
 </html>
